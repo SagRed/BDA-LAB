@@ -1,0 +1,452 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\sagred> cd /
+PS C:\> cd '.\Program Files\'
+PS C:\Program Files> cd .\MongoDB\
+PS C:\Program Files\MongoDB> ls
+
+
+    Directory: C:\Program Files\MongoDB
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        15-04-2021     14:36                Server
+
+
+PS C:\Program Files\MongoDB> cd .\Server\
+PS C:\Program Files\MongoDB\Server> cd .\4.4\
+PS C:\Program Files\MongoDB\Server\4.4> ls
+
+
+    Directory: C:\Program Files\MongoDB\Server\4.4
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        15-04-2021     14:36                bin
+d-----        15-04-2021     16:18                data
+d-----        15-04-2021     14:54                log
+-a----        06-04-2021     20:53          30608 LICENSE-Community.txt
+-a----        06-04-2021     20:53          16726 MPL-2
+-a----        06-04-2021     20:53           1977 README
+-a----        06-04-2021     20:53          75685 THIRD-PARTY-NOTICES
+
+
+PS C:\Program Files\MongoDB\Server\4.4> ls
+
+
+    Directory: C:\Program Files\MongoDB\Server\4.4
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        15-04-2021     14:36                bin
+d-----        15-04-2021     16:18                data
+d-----        15-04-2021     14:54                log
+-a----        06-04-2021     20:53          30608 LICENSE-Community.txt
+-a----        06-04-2021     20:53          16726 MPL-2
+-a----        06-04-2021     20:53           1977 README
+-a----        06-04-2021     20:53          75685 THIRD-PARTY-NOTICES
+
+
+PS C:\Program Files\MongoDB\Server\4.4> cd bin
+PS C:\Program Files\MongoDB\Server\4.4\bin> ls
+
+
+    Directory: C:\Program Files\MongoDB\Server\4.4\bin
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        06-04-2021     20:53           1558 InstallCompass.ps1
+-a----        06-04-2021     21:23       21703680 mongo.exe
+-a----        15-04-2021     14:54            616 mongod.cfg
+-a----        06-04-2021     22:04       38419456 mongod.exe
+-a----        06-04-2021     22:04      388755456 mongod.pdb
+-a----        06-04-2021     21:38       27326464 mongos.exe
+-a----        06-04-2021     21:38      261951488 mongos.pdb
+
+
+PS C:\Program Files\MongoDB\Server\4.4\bin> .\mongod.exe
+{"t":{"$date":"2021-04-15T16:19:04.038+05:30"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-04-15T16:19:04.050+05:30"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-04-15T16:19:04.051+05:30"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-04-15T16:19:04.060+05:30"},"s":"I",  "c":"STORAGE",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":12916,"port":27017,"dbPath":"C:/data/db/","architecture":"64-bit","host":"ROG-ZEPHYRUS"}}
+{"t":{"$date":"2021-04-15T16:19:04.061+05:30"},"s":"I",  "c":"CONTROL",  "id":23398,   "ctx":"initandlisten","msg":"Target operating system minimum version","attr":{"targetMinOS":"Windows 7/Windows Server 2008 R2"}}
+{"t":{"$date":"2021-04-15T16:19:04.061+05:30"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"4.4.5","gitVersion":"ff5cb77101b052fa02da43b8538093486cf9b3f7","modules":[],"allocator":"tcmalloc","environment":{"distmod":"windows","distarch":"x86_64","target_arch":"x86_64"}}}}
+{"t":{"$date":"2021-04-15T16:19:04.063+05:30"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Microsoft Windows 10","version":"10.0 (build 19042)"}}}
+{"t":{"$date":"2021-04-15T16:19:04.063+05:30"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{}}}
+{"t":{"$date":"2021-04-15T16:19:04.067+05:30"},"s":"E",  "c":"STORAGE",  "id":20557,   "ctx":"initandlisten","msg":"DBException in initAndListen, terminating","attr":{"error":"NonExistentPath: Data directory C:\\data\\db\\ not found. Create the missing directory or specify another path using (1) the --dbpath command line option, or (2) by adding the 'storage.dbPath' option in the configuration file."}}
+{"t":{"$date":"2021-04-15T16:19:04.068+05:30"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"initandlisten","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":10000}}
+{"t":{"$date":"2021-04-15T16:19:04.070+05:30"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"initandlisten","msg":"Shutting down the MirrorMaestro"}
+{"t":{"$date":"2021-04-15T16:19:04.070+05:30"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"initandlisten","msg":"Shutting down the WaitForMajorityService"}
+{"t":{"$date":"2021-04-15T16:19:04.070+05:30"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"initandlisten","msg":"Shutdown: going to close listening sockets"}
+{"t":{"$date":"2021-04-15T16:19:04.071+05:30"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"initandlisten","msg":"Shutting down the global connection pool"}
+{"t":{"$date":"2021-04-15T16:19:04.071+05:30"},"s":"I",  "c":"STORAGE",  "id":4784906, "ctx":"initandlisten","msg":"Shutting down the FlowControlTicketholder"}
+{"t":{"$date":"2021-04-15T16:19:04.071+05:30"},"s":"I",  "c":"-",        "id":20520,   "ctx":"initandlisten","msg":"Stopping further Flow Control ticket acquisitions."}
+{"t":{"$date":"2021-04-15T16:19:04.072+05:30"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"initandlisten","msg":"Shutting down the ReplicaSetMonitor"}
+{"t":{"$date":"2021-04-15T16:19:04.072+05:30"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"initandlisten","msg":"Shutting down the MigrationUtilExecutor"}
+{"t":{"$date":"2021-04-15T16:19:04.073+05:30"},"s":"I",  "c":"CONTROL",  "id":4784925, "ctx":"initandlisten","msg":"Shutting down free monitoring"}
+{"t":{"$date":"2021-04-15T16:19:04.073+05:30"},"s":"I",  "c":"STORAGE",  "id":4784927, "ctx":"initandlisten","msg":"Shutting down the HealthLog"}
+{"t":{"$date":"2021-04-15T16:19:04.074+05:30"},"s":"I",  "c":"STORAGE",  "id":4784929, "ctx":"initandlisten","msg":"Acquiring the global lock for shutdown"}
+{"t":{"$date":"2021-04-15T16:19:04.078+05:30"},"s":"I",  "c":"-",        "id":4784931, "ctx":"initandlisten","msg":"Dropping the scope cache for shutdown"}
+{"t":{"$date":"2021-04-15T16:19:04.078+05:30"},"s":"I",  "c":"FTDC",     "id":4784926, "ctx":"initandlisten","msg":"Shutting down full-time data capture"}
+{"t":{"$date":"2021-04-15T16:19:04.079+05:30"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"initandlisten","msg":"Now exiting"}
+{"t":{"$date":"2021-04-15T16:19:04.079+05:30"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"initandlisten","msg":"Shutting down","attr":{"exitCode":100}}
+PS C:\Program Files\MongoDB\Server\4.4\bin> .\mongod.exe
+{"t":{"$date":"2021-04-15T16:19:07.836+05:30"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-04-15T16:19:08.106+05:30"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-04-15T16:19:08.107+05:30"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-04-15T16:19:08.111+05:30"},"s":"I",  "c":"STORAGE",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":13160,"port":27017,"dbPath":"C:/data/db/","architecture":"64-bit","host":"ROG-ZEPHYRUS"}}
+{"t":{"$date":"2021-04-15T16:19:08.111+05:30"},"s":"I",  "c":"CONTROL",  "id":23398,   "ctx":"initandlisten","msg":"Target operating system minimum version","attr":{"targetMinOS":"Windows 7/Windows Server 2008 R2"}}
+{"t":{"$date":"2021-04-15T16:19:08.112+05:30"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"4.4.5","gitVersion":"ff5cb77101b052fa02da43b8538093486cf9b3f7","modules":[],"allocator":"tcmalloc","environment":{"distmod":"windows","distarch":"x86_64","target_arch":"x86_64"}}}}
+{"t":{"$date":"2021-04-15T16:19:08.112+05:30"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Microsoft Windows 10","version":"10.0 (build 19042)"}}}
+{"t":{"$date":"2021-04-15T16:19:08.113+05:30"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{}}}
+{"t":{"$date":"2021-04-15T16:19:08.114+05:30"},"s":"E",  "c":"STORAGE",  "id":20557,   "ctx":"initandlisten","msg":"DBException in initAndListen, terminating","attr":{"error":"NonExistentPath: Data directory C:\\data\\db\\ not found. Create the missing directory or specify another path using (1) the --dbpath command line option, or (2) by adding the 'storage.dbPath' option in the configuration file."}}
+{"t":{"$date":"2021-04-15T16:19:08.114+05:30"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"initandlisten","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":10000}}
+{"t":{"$date":"2021-04-15T16:19:08.115+05:30"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"initandlisten","msg":"Shutting down the MirrorMaestro"}
+{"t":{"$date":"2021-04-15T16:19:08.116+05:30"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"initandlisten","msg":"Shutting down the WaitForMajorityService"}
+{"t":{"$date":"2021-04-15T16:19:08.116+05:30"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"initandlisten","msg":"Shutdown: going to close listening sockets"}
+{"t":{"$date":"2021-04-15T16:19:08.116+05:30"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"initandlisten","msg":"Shutting down the global connection pool"}
+{"t":{"$date":"2021-04-15T16:19:08.117+05:30"},"s":"I",  "c":"STORAGE",  "id":4784906, "ctx":"initandlisten","msg":"Shutting down the FlowControlTicketholder"}
+{"t":{"$date":"2021-04-15T16:19:08.117+05:30"},"s":"I",  "c":"-",        "id":20520,   "ctx":"initandlisten","msg":"Stopping further Flow Control ticket acquisitions."}
+{"t":{"$date":"2021-04-15T16:19:08.118+05:30"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"initandlisten","msg":"Shutting down the ReplicaSetMonitor"}
+{"t":{"$date":"2021-04-15T16:19:08.118+05:30"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"initandlisten","msg":"Shutting down the MigrationUtilExecutor"}
+{"t":{"$date":"2021-04-15T16:19:08.118+05:30"},"s":"I",  "c":"CONTROL",  "id":4784925, "ctx":"initandlisten","msg":"Shutting down free monitoring"}
+{"t":{"$date":"2021-04-15T16:19:08.119+05:30"},"s":"I",  "c":"STORAGE",  "id":4784927, "ctx":"initandlisten","msg":"Shutting down the HealthLog"}
+{"t":{"$date":"2021-04-15T16:19:08.119+05:30"},"s":"I",  "c":"STORAGE",  "id":4784929, "ctx":"initandlisten","msg":"Acquiring the global lock for shutdown"}
+{"t":{"$date":"2021-04-15T16:19:08.120+05:30"},"s":"I",  "c":"-",        "id":4784931, "ctx":"initandlisten","msg":"Dropping the scope cache for shutdown"}
+{"t":{"$date":"2021-04-15T16:19:08.120+05:30"},"s":"I",  "c":"FTDC",     "id":4784926, "ctx":"initandlisten","msg":"Shutting down full-time data capture"}
+{"t":{"$date":"2021-04-15T16:19:08.124+05:30"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"initandlisten","msg":"Now exiting"}
+{"t":{"$date":"2021-04-15T16:19:08.125+05:30"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"initandlisten","msg":"Shutting down","attr":{"exitCode":100}}
+PS C:\Program Files\MongoDB\Server\4.4\bin> .\mongo.exe
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("2eaa6730-3223-4317-ac97-c63c5f21fc28") }
+MongoDB server version: 4.4.5
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+        https://community.mongodb.com
+---
+The server generated these startup warnings when booting:
+        2021-04-15T14:54:02.540+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+>
+>
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> db
+test
+> use student
+switched to db student
+> db.createCollection('Student');
+{ "ok" : 1 }
+> db
+student
+> show collection
+uncaught exception: Error: don't know how to show [collection] :
+shellHelper.show@src/mongo/shell/utils.js:1191:11
+shellHelper@src/mongo/shell/utils.js:819:15
+@(shellhelp2):1:1
+> show collections
+Student
+> db.Student.insert({})
+WriteResult({ "nInserted" : 1 })
+> db.Student
+student.Student
+> db.Student.find()
+{ "_id" : ObjectId("60781afe4821046778b99719") }
+> db.Student()
+uncaught exception: TypeError: db.Student is not a function :
+@(shell):1:1
+> db.Student.find()
+{ "_id" : ObjectId("60781afe4821046778b99719") }
+> db.Student.remove()
+uncaught exception: Error: remove needs a query :
+DBCollection.prototype._parseRemove@src/mongo/shell/collection.js:362:15
+DBCollection.prototype.remove@src/mongo/shell/collection.js:389:18
+@(shell):1:1
+> db.Student.find()
+{ "_id" : ObjectId("60781afe4821046778b99719") }
+> db.Student.remove(*)
+uncaught exception: SyntaxError: expected expression, got '*' :
+@(shell):1:18
+> db.Student.remove("_id")
+WriteResult({
+        "nRemoved" : 0,
+        "writeError" : {
+                "code" : 139,
+                "errmsg" : "ReferenceError: _id is not defined :\n@:1:15\n"
+        }
+})
+> db.Student.find()
+{ "_id" : ObjectId("60781afe4821046778b99719") }
+> db.Student.drop()
+true
+> db
+student
+> db.dropDatabase()
+{ "dropped" : "student", "ok" : 1 }
+> db
+student
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use school
+switched to db school
+> db
+school
+> db.createCollection("Student")
+{ "ok" : 1 }
+> db.createCollection("Faculty")
+{ "ok" : 1 }
+> db.createCollection("COE")
+{ "ok" : 1 }
+> db.createCollection("Library")
+{ "ok" : 1 }
+> db.createCollection("Admission")
+{ "ok" : 1 }
+> show collections
+Admission
+COE
+Faculty
+Library
+Student
+> db.Student.insert({name:"sagred",grade:"5",hobbies:"sleeping"})
+WriteResult({ "nInserted" : 1 })
+> db.Student.insert({name:"sag",grade:"4",hobbies:"eating"})
+WriteResult({ "nInserted" : 1 })
+> db.Student.insert({name:"red",grade:"3",hobbies:"driving"})
+WriteResult({ "nInserted" : 1 })
+> db.Student.insert({name:"greeddd",grade:"1",hobbies:"running"})
+WriteResult({ "nInserted" : 1 })
+> db.Student.find()
+{ "_id" : ObjectId("60781ce64821046778b9971a"), "name" : "sagred", "grade" : "5", "hobbies" : "sleeping" }
+{ "_id" : ObjectId("60781cf44821046778b9971b"), "name" : "sag", "grade" : "4", "hobbies" : "eating" }
+{ "_id" : ObjectId("60781d044821046778b9971c"), "name" : "red", "grade" : "3", "hobbies" : "driving" }
+{ "_id" : ObjectId("60781d254821046778b9971d"), "name" : "greeddd", "grade" : "1", "hobbies" : "running" }
+> db.Student.insert({name:"reddy",grade:"10",hobbies:"spreading rumars",book:"0-1"})
+WriteResult({ "nInserted" : 1 })
+> db.Student.find()
+{ "_id" : ObjectId("60781ce64821046778b9971a"), "name" : "sagred", "grade" : "5", "hobbies" : "sleeping" }
+{ "_id" : ObjectId("60781cf44821046778b9971b"), "name" : "sag", "grade" : "4", "hobbies" : "eating" }
+{ "_id" : ObjectId("60781d044821046778b9971c"), "name" : "red", "grade" : "3", "hobbies" : "driving" }
+{ "_id" : ObjectId("60781d254821046778b9971d"), "name" : "greeddd", "grade" : "1", "hobbies" : "running" }
+{ "_id" : ObjectId("60781d7d4821046778b9971e"), "name" : "reddy", "grade" : "10", "hobbies" : "spreading rumars", "book" : "0-1" }
+> db.Student.find(name:"reddy")
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:20
+> db.Student.find({name:"reddy"})
+{ "_id" : ObjectId("60781d7d4821046778b9971e"), "name" : "reddy", "grade" : "10", "hobbies" : "spreading rumars", "book" : "0-1" }
+> db.find().pretty()
+uncaught exception: TypeError: db.find is not a function :
+@(shell):1:1
+> db.Student.find().pretty()
+{
+        "_id" : ObjectId("60781ce64821046778b9971a"),
+        "name" : "sagred",
+        "grade" : "5",
+        "hobbies" : "sleeping"
+}
+{
+        "_id" : ObjectId("60781cf44821046778b9971b"),
+        "name" : "sag",
+        "grade" : "4",
+        "hobbies" : "eating"
+}
+{
+        "_id" : ObjectId("60781d044821046778b9971c"),
+        "name" : "red",
+        "grade" : "3",
+        "hobbies" : "driving"
+}
+{
+        "_id" : ObjectId("60781d254821046778b9971d"),
+        "name" : "greeddd",
+        "grade" : "1",
+        "hobbies" : "running"
+}
+{
+        "_id" : ObjectId("60781d7d4821046778b9971e"),
+        "name" : "reddy",
+        "grade" : "10",
+        "hobbies" : "spreading rumars",
+        "book" : "0-1"
+}
+> db.Student.find({grade:5}).pretty()
+> db.Student.find({grade:1}).pretty()
+> db.Student.find().count()
+5
+> show collections
+Admission
+COE
+Faculty
+Library
+Student
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> use Festival
+switched to db Festival
+> db.createCollection("festivals")
+{ "ok" : 1 }
+> show collections
+festivals
+> db.festivals.insert({num:1, name:"film fest",from:"12 Jan",to:"13 Feb",registration:"open
+uncaught exception: SyntaxError: "" literal not terminated before end of script :
+@(shell):1:89
+> db.festivals.insert({num:1,name:"film fest",from:"12 Jan",to:"13 Feb",reg:"open"})
+WriteResult({ "nInserted" : 1 })
+> db.festivals.insert({num:2,name:"holy",from:"1 Jan",to:"3 Feb",reg:"open"})
+WriteResult({ "nInserted" : 1 })
+> db.festivals.insert({num:2,name:"tomAndJerry",from:"2 March",to:"5 April",reg:"closed"})
+WriteResult({ "nInserted" : 1 })
+> db.festivals.insert({num:4,name:"oggy",from:"2 feb",to:"5 may",reg:"closed"})
+WriteResult({ "nInserted" : 1 })
+> db.festivals.find()
+{ "_id" : ObjectId("60781f794821046778b9971f"), "num" : 1, "name" : "film fest", "from" : "12 Jan", "to" : "13 Feb", "reg" : "open" }
+{ "_id" : ObjectId("60781f8d4821046778b99720"), "num" : 2, "name" : "holy", "from" : "1 Jan", "to" : "3 Feb", "reg" : "open" }
+{ "_id" : ObjectId("60781fae4821046778b99721"), "num" : 2, "name" : "tomAndJerry", "from" : "2 March", "to" : "5 April", "reg" : "closed" }
+{ "_id" : ObjectId("60781fcf4821046778b99722"), "num" : 4, "name" : "oggy", "from" : "2 feb", "to" : "5 may", "reg" : "closed" }
+> db.festivals.find().pretty()
+{
+        "_id" : ObjectId("60781f794821046778b9971f"),
+        "num" : 1,
+        "name" : "film fest",
+        "from" : "12 Jan",
+        "to" : "13 Feb",
+        "reg" : "open"
+}
+{
+        "_id" : ObjectId("60781f8d4821046778b99720"),
+        "num" : 2,
+        "name" : "holy",
+        "from" : "1 Jan",
+        "to" : "3 Feb",
+        "reg" : "open"
+}
+{
+        "_id" : ObjectId("60781fae4821046778b99721"),
+        "num" : 2,
+        "name" : "tomAndJerry",
+        "from" : "2 March",
+        "to" : "5 April",
+        "reg" : "closed"
+}
+{
+        "_id" : ObjectId("60781fcf4821046778b99722"),
+        "num" : 4,
+        "name" : "oggy",
+        "from" : "2 feb",
+        "to" : "5 may",
+        "reg" : "closed"
+}
+> db.festivals.remove({num:2})
+WriteResult({ "nRemoved" : 2 })
+> db.festivals.find().pretty()
+{
+        "_id" : ObjectId("60781f794821046778b9971f"),
+        "num" : 1,
+        "name" : "film fest",
+        "from" : "12 Jan",
+        "to" : "13 Feb",
+        "reg" : "open"
+}
+{
+        "_id" : ObjectId("60781fcf4821046778b99722"),
+        "num" : 4,
+        "name" : "oggy",
+        "from" : "2 feb",
+        "to" : "5 may",
+        "reg" : "closed"
+}
+> db.festivals.update({num:4},{name:"tomato fest"},{upsert:true})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.festivals.find().pretty()
+{
+        "_id" : ObjectId("60781f794821046778b9971f"),
+        "num" : 1,
+        "name" : "film fest",
+        "from" : "12 Jan",
+        "to" : "13 Feb",
+        "reg" : "open"
+}
+{ "_id" : ObjectId("60781fcf4821046778b99722"), "name" : "tomato fest" }
+> db.festivals.createIndex({name:"film fest"})
+{
+        "ok" : 0,
+        "errmsg" : "Error in specification { key: { name: \"film fest\" }, name: \"name_film fest\" } :: caused by :: Unknown index plugin 'film fest'",
+        "code" : 67,
+        "codeName" : "CannotCreateIndex"
+}
+> db
+Festival
+> show collections
+festivals
+> show dbs
+Festival  0.000GB
+admin     0.000GB
+config    0.000GB
+local     0.000GB
+school    0.000GB
