@@ -1,5 +1,7 @@
 sagred@ROG-ZEPHYRUS:~$ hadoop fs -mkdir /wc_input
+
 sagred@ROG-ZEPHYRUS:~$ hadoop fs -copyFromLocal ~/wc.txt /wc_input/wc.txt
+
 sagred@ROG-ZEPHYRUS:~$ hadoop jar ~/wordcount.jar WordCount.WordCount /wc_input /wc_output
 
 sagred@ROG-ZEPHYRUS:~$ cat ~/wordcount.jar
@@ -89,6 +91,7 @@ Bear    2
 Car     3
 Deer    2
 River   2
+
 sagred@ROG-ZEPHYRUS:~$ hadoop fs -ls /wc_output
 Found 2 items
 -rw-r--r--   1 sagred supergroup          0 2021-04-29 14:59 /wc_output/_SUCCESS
